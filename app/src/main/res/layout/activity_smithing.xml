@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_mining_scene"
+    tools:context=".Mining">
+
+    <ScrollView
+        android:id="@+id/scrollView_bar_amounts"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView_bar_crafting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Copper -->
+
+            <!-- layout_constraintBottom_toBottomOf:    Bottom to Bottom if last element, else Bottom to Top of next field -->
+            <!-- layout_constraintEnd_toStartOf:        To next view with amount value -->
+            <!-- layout_constraintHorizontal_weight:    Always 1 -->
+            <!-- layout_constraintStart_toStartOf:      Always parent -->
+            <!-- layout_constraintTop_toBottomOf:       To previous name field-->
+
+            <TextView
+                android:id="@+id/text_bronze_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Bronze Bar: "
+                app:layout_constraintBottom_toTopOf="@id/text_iron_bar"
+                app:layout_constraintEnd_toStartOf="@id/text_bronze_bar_amount"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- layout_constraintBottom_toBottomOf:    Bottom to Bottom if last element, else Bottom to Top of next amount field -->
+            <!-- layout_constraintEnd_toEndOf:          Always parent -->
+            <!-- layout_constraintHorizontal_weight:    Always 3 -->
+            <!-- layout_constraintStart_toEndOf:        Start of Progress bar to end of text_ore -->
+            <!-- layout_constraintTop_toBottomOf:       To previous amount field-->
+
+            <TextView
+                android:id="@+id/text_bronze_bar_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="100"
+                app:layout_constraintBottom_toTopOf="@id/text_iron_bar_amount"
+                app:layout_constraintEnd_toStartOf="@+id/text_copper_ore"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@id/text_bronze_bar"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- layout_constraintBottom_toBottomOf:    Bottom to Bottom if last element, else Bottom to Top of next field -->
+            <!-- layout_constraintEnd_toStartOf:        To next view with amount value -->
+            <!-- layout_constraintHorizontal_weight:    Always 1 -->
+            <!-- layout_constraintStart_toStartOf:      Always parent -->
+            <!-- layout_constraintTop_toBottomOf:       To previous name field-->
+
+            <TextView
+                android:id="@+id/text_copper_ore"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Copper Ore: "
+                app:layout_constraintBottom_toTopOf="@id/text_tin_ore"
+                app:layout_constraintEnd_toStartOf="@+id/text_copper_ore_amount"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/text_bronze_bar_amount"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- layout_constraintBottom_toBottomOf:    Bottom to Bottom if last element, else Bottom to Top of next amount field -->
+            <!-- layout_constraintEnd_toEndOf:          Always parent -->
+            <!-- layout_constraintHorizontal_weight:    Always 3 -->
+            <!-- layout_constraintStart_toEndOf:        Start of Progress bar to end of text_ore -->
+            <!-- layout_constraintTop_toBottomOf:       To previous amount field-->
+
+            <TextView
+                android:id="@+id/text_copper_ore_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="100"
+                app:layout_constraintBottom_toTopOf="@id/text_tin_ore_amount"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@id/text_copper_ore"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Iron -->
+
+            <!-- layout_constraintBottom_toBottomOf:    Bottom to Bottom if last element, else Bottom to Top of next field -->
+            <!-- layout_constraintEnd_toStartOf:        To next view with amount value -->
+            <!-- layout_constraintHorizontal_weight:    Always 1 -->
+            <!-- layout_constraintStart_toStartOf:      Always parent -->
+            <!-- layout_constraintTop_toBottomOf:       To previous name field-->
+
+            <TextView
+                android:id="@+id/text_iron_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Iron Bar: "
+                app:layout_constraintBottom_toTopOf="@id/text_mithril_bar"
+                app:layout_constraintEnd_toStartOf="@+id/text_iron_bar_amount"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_bronze_bar" />
+
+            <!-- layout_constraintBottom_toBottomOf:    Bottom to Bottom if last element, else Bottom to Top of next amount field -->
+            <!-- layout_constraintEnd_toEndOf:          Always parent -->
+            <!-- layout_constraintHorizontal_weight:    Always 3 -->
+            <!-- layout_constraintStart_toEndOf:        Start of Progress bar to end of text_ore -->
+            <!-- layout_constraintTop_toBottomOf:       To previous amount field-->
+
+            <TextView
+                android:id="@+id/text_iron_bar_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="100"
+                app:layout_constraintBottom_toTopOf="@id/text_mithril_bar_amount"
+                app:layout_constraintEnd_toStartOf="@id/text_tin_ore"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/text_iron_bar"
+                app:layout_constraintTop_toBottomOf="@id/text_bronze_bar_amount" />
+
+            <!-- layout_constraintBottom_toBottomOf:    Bottom to Bottom if last element, else Bottom to Top of next field -->
+            <!-- layout_constraintEnd_toStartOf:        To next view with amount value -->
+            <!-- layout_constraintHorizontal_weight:    Always 1 -->
+            <!-- layout_constraintStart_toStartOf:      Always parent -->
+            <!-- layout_constraintTop_toBottomOf:       To previous name field-->
+
+            <TextView
+                android:id="@+id/text_tin_ore"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Tin Ore: "
+                app:layout_constraintBottom_toTopOf="@id/text_iron_ore"
+                app:layout_constraintEnd_toStartOf="@+id/text_tin_ore_amount"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/text_iron_bar_amount"
+                app:layout_constraintTop_toBottomOf="@+id/text_copper_ore" />
+
+            <!-- layout_constraintBottom_toBottomOf:    Bottom to Bottom if last element, else Bottom to Top of next amount field -->
+            <!-- layout_constraintEnd_toEndOf:          Always parent -->
+            <!-- layout_constraintHorizontal_weight:    Always 3 -->
+            <!-- layout_constraintStart_toEndOf:        Start of Progress bar to end of text_ore -->
+            <!-- layout_constraintTop_toBottomOf:       To previous amount field-->
+
+            <TextView
+                android:id="@+id/text_tin_ore_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="100"
+                app:layout_constraintBottom_toTopOf="@id/text_iron_ore_amount"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@id/text_tin_ore"
+                app:layout_constraintTop_toBottomOf="@+id/text_copper_ore_amount" />
+
+            <!-- Mithril -->
+
+            <!-- layout_constraintBottom_toBottomOf:    Bottom to Bottom if last element, else Bottom to Top of next  field -->
+            <!-- layout_constraintEnd_toStartOf:        To next view with amount value -->
+            <!-- layout_constraintHorizontal_weight:    Always 1 -->
+            <!-- layout_constraintStart_toStartOf:      Always parent -->
+            <!-- layout_constraintTop_toBottomOf:       To previous name field-->
+
+            <TextView
+                android:id="@+id/text_mithril_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Mithril Bar: "
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/text_mithril_bar_amount"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_iron_bar" />
+
+            <!-- layout_constraintBottom_toBottomOf:    Bottom to Bottom (parent) if last element, else Bottom to Top of next amount field -->
+            <!-- layout_constraintEnd_toEndOf:          Always parent -->
+            <!-- layout_constraintHorizontal_weight:    Always 3 -->
+            <!-- layout_constraintStart_toEndOf:        text_ore -->
+            <!-- layout_constraintTop_toBottomOf:       To previous amount field-->
+
+            <TextView
+                android:id="@+id/text_mithril_bar_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="100"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/text_iron_ore"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/text_mithril_bar"
+                app:layout_constraintTop_toBottomOf="@id/text_iron_bar_amount" />
+
+            <!-- layout_constraintBottom_toBottomOf:    Bottom to Bottom if last element, else Bottom to Top of next field -->
+            <!-- layout_constraintEnd_toStartOf:        To next view with amount value -->
+            <!-- layout_constraintHorizontal_weight:    Always 1 -->
+            <!-- layout_constraintStart_toStartOf:      Always parent -->
+            <!-- layout_constraintTop_toBottomOf:       To previous name field-->
+
+            <TextView
+                android:id="@+id/text_iron_ore"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Tin Ore: "
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/text_iron_ore_amount"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/text_mithril_bar_amount"
+                app:layout_constraintTop_toBottomOf="@id/text_tin_ore" />
+
+            <!-- layout_constraintBottom_toBottomOf:    Bottom to Bottom if last element, else Bottom to Top of next amount field -->
+            <!-- layout_constraintEnd_toEndOf:          Always parent -->
+            <!-- layout_constraintHorizontal_weight:    Always 3 -->
+            <!-- layout_constraintStart_toEndOf:        Start of Progress bar to end of text_ore -->
+            <!-- layout_constraintTop_toBottomOf:       To previous amount field-->
+
+            <TextView
+                android:id="@+id/text_iron_ore_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="100"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@id/text_iron_ore"
+                app:layout_constraintTop_toBottomOf="@id/text_tin_ore_amount" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollView_bar_crafting"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView_bar_amounts"
+        app:layout_constraintVertical_weight="3">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Bronze Button -->
+
+            <!-- layout_constraintBottom_toTopOf:       Next button or parent if last -->
+            <!-- layout_constraintEnd_toStartOf:        Current progress bar -->
+            <!-- layout_constraintHorizontal_weight:    Always 1 -->
+            <!-- layout_constraintStart_toStartOf:      Always parent -->
+            <!-- layout_constraintTop_toBottomOf:       previous button or parent if first -->
+
+            <Button
+                android:id="@+id/button_smithing_bronze"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Bronze"
+                app:layout_constraintBottom_toTopOf="@+id/button_smithing_iron"
+                app:layout_constraintEnd_toStartOf="@+id/progressBar_smithing_bronze"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Copper Progress Bar -->
+
+            <!-- layout_constraintBottom_toTopOf:       Next progress bar or parent if last -->
+            <!-- layout_constraintEnd_toEndOf:          Always parent -->
+            <!-- layout_constraintHorizontal_weight:    Always 2 -->
+            <!-- layout_constraintStart_toEndOf:        Current button -->
+            <!-- layout_constraintTop_toBottomOf:       previous progress bar or parent if first -->
+
+            <ProgressBar
+                android:id="@+id/progressBar_smithing_bronze"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintBottom_toTopOf="@+id/progressBar_smithing_iron"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="2"
+                app:layout_constraintStart_toEndOf="@+id/button_smithing_bronze"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Iron Button -->
+
+            <!-- layout_constraintBottom_toTopOf:       Next button or parent if last -->
+            <!-- layout_constraintEnd_toStartOf:        Current progress bar -->
+            <!-- layout_constraintHorizontal_weight:    Always 1 -->
+            <!-- layout_constraintStart_toStartOf:      Always parent -->
+            <!-- layout_constraintTop_toBottomOf:       previous button or parent if first -->
+
+            <Button
+                android:id="@+id/button_smithing_iron"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Iron"
+                app:layout_constraintBottom_toTopOf="@+id/button_smithing_mithril"
+                app:layout_constraintEnd_toStartOf="@+id/progressBar_smithing_iron"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_smithing_bronze" />
+
+            <!-- Tin Progress Bar -->
+
+            <!-- layout_constraintBottom_toTopOf:       Next progress bar or parent if last -->
+            <!-- layout_constraintEnd_toEndOf:          Always parent -->
+            <!-- layout_constraintHorizontal_weight:    Always 2 -->
+            <!-- layout_constraintStart_toEndOf:        Current button -->
+            <!-- layout_constraintTop_toBottomOf:       previous progress bar or parent if first -->
+
+            <ProgressBar
+                android:id="@+id/progressBar_smithing_iron"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintBottom_toTopOf="@+id/progressBar_smithing_mithril"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="2"
+                app:layout_constraintStart_toEndOf="@+id/button_smithing_iron"
+                app:layout_constraintTop_toBottomOf="@+id/progressBar_smithing_bronze" />
+
+            <!-- Mithril Button -->
+
+            <!-- layout_constraintBottom_toTopOf:       Next button or parent if last -->
+            <!-- layout_constraintEnd_toStartOf:        Current progress bar -->
+            <!-- layout_constraintHorizontal_weight:    Always 1 -->
+            <!-- layout_constraintStart_toStartOf:      Always parent -->
+            <!-- layout_constraintTop_toBottomOf:       previous button or parent if first -->
+
+            <Button
+                android:id="@+id/button_smithing_mithril"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Mithril"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/progressBar_smithing_mithril"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_smithing_iron" />
+
+            <!-- Mithril Progress Bar -->
+
+            <!-- layout_constraintBottom_toTopOf:       Next progress bar or parent if last -->
+            <!-- layout_constraintEnd_toEndOf:          Always parent -->
+            <!-- layout_constraintHorizontal_weight:    Always 2 -->
+            <!-- layout_constraintStart_toEndOf:        Current button -->
+            <!-- layout_constraintTop_toBottomOf:       previous progress bar or parent if first -->
+
+            <ProgressBar
+                android:id="@+id/progressBar_smithing_mithril"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="2"
+                app:layout_constraintStart_toEndOf="@+id/button_smithing_mithril"
+                app:layout_constraintTop_toBottomOf="@+id/progressBar_smithing_iron" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
